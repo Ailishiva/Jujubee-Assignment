@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <div id="brand"><a href="/">JUJUBEE</a></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="login"><a href="/login">Login</a></li>
+                <li id="signup"><a href="/signup">Signup</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="login"><a href="/login">Login</a></li>
+                <li id="signup"><a href="/signup">Signup</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <div class="slideshow">
+                <img src="Images\jewelry1.jpg" alt="Slideshow Image 1">
+                <img src="Images\jewellery2.jpg" alt="Slideshow Image 2">
+                <img src="Images\jewellery3.jpg" alt="Slideshow Image 3">
+                <img src="Images\jewellery4.jpg" alt="Slideshow Image 4">
+            </div>
+            <div class="heading">
+                <h1>Welcome to Jujubee Jewellery</h1>
+                <p>Discover elegance and craftsmanship in every piece.</p>
+                <a href="#collections" class="cta-button">Explore Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>At Jujubee Jewellery, we are dedicated to creating exquisite pieces that reflect jujubee jewellerys is a
+                jewellery retail company based in India. It was established by jujubee Bhattar in the year 1925.[2] As
+                of
+                June 2023, the group has 116 jewellery shops[3] across South India and more than 2000 employees.
+                Jujubee Jewellery were the first jewellery store to introduce ready-made jewellery concept under the
+                guidance of
+                its founder Jujubee Bhattar.[4]
+
+                Jujubee has branches at Chennai, Kottayam, Thirunelveli, Thiruvananthapuram, Kochi,[5] Kozhikode,[6]
+                Bengaluru, Nagercoil and Madurai. After the death of founder jujubee Bhattar, the Group was managed by
+                his
+                five sons, Girirajan, Govindan, Krishnan, Bindumadhav and Lakshmikanthan, with each having separately
+                managed headquarters and their own chain of branches.[citation needed] In 2012, jujubee announced a
+                2-year
+                plan to expand its jewellery network by investing ₹5,500 crore.[7]
+
+                With a turnover of ₹48,000 crore in 2022, it is considered one of the six firms that controlled India's
+                gold.[8]...</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="products">
+            <h2>Our Products</h2>
+            <div class="product-section">
+                <div class="product">
+                    <img src="Images\gold-necklace.webp" alt="Product 1">
+                    <h3>Gold Necklace</h3>
+                    <p>Price : $499</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Gold Necklace', '$499', )">Buy
+                        Now</button>
+
+
+                </div>
+                <div class="product">
+                    <img src="Images\gold-wedding.webp" alt="Product 1">
+                    <h3>Rings</h3>
+                    <p>Price : $150</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Rings', '$150')">Buy Now
+                </div>
+                <div class="product">
+                    <img src="Images\bracelet.jpg" alt=" Bracelet">
+                    <h3>Bracelet</h3>
+                    <p>Price : $250</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Bracelet', '$250')">Buy Now
+                </div>
+                <div class="product">
+                    <img src="Images\silver-earnings.jpg" alt="Product 2">
+                    <h3>Silver Earrings</h3>
+                    <p>Price : $109</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('silver-earnings', '$109')">Buy
+                        Now</button>
+                </div>
+                <div class="product">
+                    <img src="Images\bangles.jpg" alt="Product 2">
+                    <h3>Bangles</h3>
+                    <p>Price : $149</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Bangles', '$149')">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="Images\ear-rings.webp" alt="Ear-Rings">
+                    <h3>Ear-Rings</h3>
+                    <p>Price : $129</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Ear-Rings', '$129')">Buy Now</button>
+
+                </div>
+                <!-- Add more product items here -->
+                <div class="product">
+                    <img src="Images\diamond-ring.webp" alt="Diamond Ring">
+                    <h3>Diamond Ring</h3>
+                    <p>Price : $999</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Diamond Ring', '$999')">Buy
+                        Now</button>
+
+                </div>
+
+                <div class="product">
+                    <img src="Images\nose-ring.avif" alt="Nose Ring">
+                    <h3>Nose Ring</h3>
+                    <p>Price : $99</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Nos Ringe', '$99')">Buy Now</button>
+
+                </div>
+
+                <div class="product">
+                    <img src="Images\chain.jpg" alt="Chain">
+                    <h3>Chain</h3>
+                    <p>Price : $199</p>
+                    <button class="buy-button" onclick="redirectToProductDetails('Chain', '$199')">Buy Now</button>
+
+                </div>
+            </div>
+            <!-- Add more product items here -->
+        </div>
+    </section>
+
+    <section id="collections">
+        <h2 class="collections-heading">Collections</h2>
+        <div class="collection">
+            <div class="item">
+                <img src="Images\category-1.jpg" alt="Jewelry Piece 1">
+                <h2>Classic Elegance</h2>
+                <p class="text">Exquisite diamond necklace for special occasions.</p>
+                <p><strong>Price: $499</strong></p>
+            </div>
+            <div class="item">
+                <img src="Images\collections4.webp" alt="Jewelry Piece 2">
+                <h2>Modern Minimalism</h2>
+                <p class="text">Sleek silver bracelet for everyday wear it looks stunning.</p>
+                <p><strong>Price: $79</strong></p>
+            </div>
+            <div class="item">
+                <img src="Images\category-2.jpg" alt="Birthstone Treasures Ring">
+                <h2>Birthstone Treasures</h2>
+                <p class="text">Stunning ring showcasing the beauty of March's aquamarine birthstone.</p>
+                <p><strong>Price: $199</strong></p>
+            </div>
+            <div class="item">
+                <img src="Images\collection6.jpg" alt="Nature-Inspired Pendant">
+                <h2>Nature-Inspired</h2>
+                <p class="text">Graceful pendant featuring a delicate leaf design.</p>
+                <p><strong>Price: $89</strong></p>
+            </div>
+            <div class="item">
+                <img src="Images\category-3.jpg" alt="Vintage Glamour Earrings">
+                <h2>Vintage Glamour</h2>
+                <p class="text">Elegant earrings inspired by the vintage era.</p>
+                <p><strong>Price: $149</strong></p>
+            </div>
+            <!-- Add more items here -->
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial">
+                <blockquote>"Jujubee Jewellery creates pieces that are truly stunning and unique. I'm always impressed
+                    by their craftsmanship."</blockquote>
+                <p>- Emily, Satisfied Customer</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"The quality and attention to detail in Jujubee Jewellery's work are unmatched. I cherish
+                    every piece I own."</blockquote>
+                <p>- Michael, Repeat Client</p>
+            </div>
+            <!-- Add more testimonials here -->
+            <div class="testimonial">
+                <blockquote>"I received the most beautiful necklace from Jujubee Jewellery. It exceeded my
+                    expectations!"</blockquote>
+                <p>- Sarah, Happy Customer</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"Truly an amazing experience from enquiry to delivery ! You show them what
+                    you want and they design it for you and handle the entire online experience with
+                    patience. Highly recommended for any jewellery design and have done multiple
+                    transactions with consistent results ! Thanks for making it a great experience
+                    and kudos to the team behind this customer experience.
+                    !"</blockquote>
+                <p>- Antony Abraham, United Arab Emirates</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"Excellent experience, really amazed how all the team worked
+                    together right from the coordination and guidance to manufacturing and shipping.
+                    Thanks for the hassle free shopping experience.
+                    "</blockquote>
+                <p>- Sushant Roy, Gujarat, India</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"I recently made a purchase of the ring,earring, pendant absolutely
+                    amazing the product quality, packaging the service and as expected it was great.
+                    This is my second time purchase I am happy I have choose Jujubee Jewellery's .
+                    Highly recommended for purchasing!
+                    "</blockquote>
+                <p>- Monika Thosani - United State</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"My experience with Jujubee Jewellery's was smooth and easy. They keep you
+                    informed about the process and timelines. The overall product delivered is
+                    as per expectation and the price is very affordable!
+                    "</blockquote>
+                <p>- Srimoyee Chatterjee - Thane, Maharashtra</p>
+            </div>
+            <!-- Add more testimonials here -->
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p class="contact-text">Have questions or inquiries? Get in touch with us:</p>
+            <form>
+                <label for="name">Name:</label>
+                <input placeholder="Enter Your Name" type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input placeholder="Enter Your Email" type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea placeholder="Write Your Queries" id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p style="margin: 20px;">You can also reach us at: contact@jujubeejewellery.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 Jujubee Jewellery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+
+        function redirectToProductDetails(productName, productPrice, productSrc) {
+            // Construct the URL with query parameters
+            const queryString = `?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}`;
+
+            // Redirect to the product-details.html page with query parameters
+            window.location.href = `product-details.html ${queryString}`;
+        }
+
+        const navbar = document.querySelector("header");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 10) { // Adjust the scroll position as needed
+                navbar.style.backgroundColor = "gray"; // Change to the desired background color
+            } else {
+                navbar.style.backgroundColor = "#1d1f1d"; // Restore the initial background color
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", smoothScroll);
+            });
+
+            const slideshowImages = document.querySelectorAll(".slideshow img");
+            let currentSlide = 0;
+
+            function showNextSlide() {
+                slideshowImages[currentSlide].style.display = "none";
+                currentSlide = (currentSlide + 1) % slideshowImages.length;
+                slideshowImages[currentSlide].style.display = "block";
+            }
+
+            function smoothScroll(e) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+
+            setInterval(showNextSlide, 3000); // Switch slide every 3 seconds
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const barsBtn = document.getElementById('bars-btn');
+            const nav = document.querySelector('nav');
+
+            barsBtn.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

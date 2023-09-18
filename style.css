@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #353836;
+    /* background-color: white; */
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header {
+    padding: 0 20px;
+    /* background-color: #1d1f1d; */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+    background-color: transparent;
+}
+
+#brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+#brand a {
+    color: #f16667;
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul a {
+    color: white;
+}
+
+ul li {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#login,
+#signup {
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+#login {
+    border: 1px solid #498afb;
+}
+
+#signup {
+    border: 1px solid #f16667;
+}
+
+#signup a {
+    color: #f16667;
+}
+
+#login a {
+    color: #498afb;
+}
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+.slideshow {
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.slideshow img {
+    display: none;
+    width: 100%;
+    height: 150vh;
+    object-fit: cover;
+}
+
+.slideshow img:first-child {
+    display: block;
+}
+
+/* Hero Banner */
+.heading {
+    background-image: url('https://img.freepik.com/premium-photo/gold-traditional-jewellery_182633-104.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    /* margin: 20px; */
+    /* padding: 5rem 0; */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background-color: #f16667;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e45f60;
+}
+
+/* About Us */
+.about {
+    padding: 5rem 0;
+    background-image: url('https://wallpaperaccess.com/full/685279.jpg');
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    width: 350px;
+    color: #fff;
+    font-family: monospace;
+    text-align: center;
+    padding: 30px;
+    letter-spacing: 1px;
+
+}
+
+/* Products */
+.products {
+    padding: 5rem 0;
+}
+
+.product {
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    /* transition: transform 0.3s ease; */
+}
+
+/* .product:hover {
+    /* transform: translateX(10px); 
+background-color: #498afb;
+}
+*/
+.product img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    width: 250px;
+    height: 200px;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+.products h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.product h3 {
+    margin-bottom: 0.5rem;
+    color: #373435;
+}
+
+.product p {
+    font-weight: bold;
+    color: #f16667;
+    margin: 20px;
+}
+
+.product-det {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.buy-button {
+    background-color: #f16667;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #e45f60;
+}
+
+/* Collections */
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.collections-heading {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    max-width: 300px;
+}
+
+.item img {
+    max-width: 100%;
+    /* height: auto; */
+    height: 500px;
+}
+
+.item h2 {
+    color: #f16667;
+}
+
+.item strong {
+    color: #f16667;
+    padding: 20px;
+}
+
+
+/* Testimonials */
+#testimonials {
+    /* text-align: center; */
+    padding: 50px 0;
+    /* background-color: #f8f8f8; */
+    margin: 20px;
+}
+
+.testimonials {
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    font-size: 3rem;
+}
+
+.testimonial {
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+}
+
+.testimonial p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+/* Contact Us */
+.contact {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 1rem 2rem;
+    background-color: #f16667;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e45f60;
+}
+
+/* Footer */
+.footer {
+    background-color: #f6f6f6;
+    padding: 2rem 0;
+    color: #373435;
+    text-align: center;
+}
+
+
+
+/* Responsive Design - Example for smaller screens */
+@media screen and (max-width: 768px) {
+
+    /* Adjust styles for smaller screens */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .product-det {
+        display: initial;
+        text-align: center;
+    }
+
+    .des {
+        margin-left: 8rem !important;
+        width: fit-content !important;
+    }
+
+    ul {
+        font-size: 11px
+    }
+
+    .cta-button {
+        padding: 12px 12px;
+    }
+
+    .about p {
+        width: 756px;
+        padding: 85px;
+    }
+
+    .products h2 {
+        font-size: 2rem;
+    }
+
+    .product p {
+        padding: 10px;
+
+        margin: 0px;
+    }
+
+    /* Adjust other section styles */
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a.active {
+    color: #f16667;
+}
+
+/* Button hover effect */
+.cta-button,
+button {
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+button:hover {
+    background-color: #e45f60;
+}
+
+/* Link hover effect */
+nav a:hover {
+    color: #f16667;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+
+    .product-det {
+        display: initial;
+    }
+
+
+    .img {
+        width: 300px;
+        margin: 10px;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+
+    .slideshow {
+        position: inherit;
+    }
+
+    ul {
+        background-color: rgba(201, 76, 76, 0.7);
+        height: 119vh !important;
+    }
+
+    .slideshow img {
+        height: auto;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 10px;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 11px;
+        width: 319px;
+        letter-spacing: 0px;
+    }
+
+    .product-section {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .products h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .product {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .product h3 {
+        font-size: 13px;
+    }
+
+    .buy-button {
+        padding: 5px 5px
+    }
+
+    .product img {
+
+        width: 200px;
+        height: 150px;
+    }
+
+    .product p {
+        font-size: 10px;
+    }
+
+    .collections-heading {
+        font-size: 2rem;
+    }
+
+    .item h2 {
+        font-size: 20px;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact-text {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    input,
+    textarea {
+        width: 80%;
+
+    }
+
+    form {
+        padding: 20px;
+    }
+
+
+}

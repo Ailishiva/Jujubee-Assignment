@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div id="brand"><a href="/">JUJUBEE</a></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="login"><a href="/login">Login</a></li>
+                <li id="signup"><a href="/signup">Signup</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="login"><a href="/login">Login</a></li>
+                <li id="signup"><a href="/signup">Signup</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <section id="product-details">
+            <div class="product-details">
+
+                <h2 style="margin: 25px">Product Details</h2>
+                <div class="product-det">
+                    <div>
+                        <img class="img" src="Images\gold-necklace.webp"
+                            style="border: 1px solid white; padding: 20px;border-radius: 19px;" alt="Product 1">
+                    </div>
+                    <div>
+                        <div id="product-name" style="padding: 20px;font-size: 24px"></div>
+                        <div id="product-price" style="padding: 20px;font-size: 24px;color: #f16667;"></div>
+                        <div style="padding: 20px;font-size: 24px">Rating 4.1</div>
+                        <button style="margin: 20px;font-size: 24px" onclick="alert('product added sucessfully')">Add to
+                            cart</button>
+                        <p class="des" style="width: 300px; margin: 20px;">Women Gold-Plated Green CZ Stone Studded
+                            Temple Jewellery
+                            Set</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add other product details here -->
+    </div>
+    </section>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 Jujubee Jewellery. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+        const navbar = document.querySelector("header");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 10) { // Adjust the scroll position as needed
+                navbar.style.backgroundColor = "gray"; // Change to the desired background color
+            } else {
+                navbar.style.backgroundColor = "#1d1f1d"; // Restore the initial background color
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve the product details from the query parameters
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            const productName = urlParams.get("name");
+            const productPrice = urlParams.get("price");
+            // const productImg = urlParams.get('src')
+
+            // Display product details on the page
+            // const productImgElement = document.getElementsByClassName('img')
+            // productImgElement.src = productImg;
+            const productNameElement = document.getElementById("product-name");
+            productNameElement.textContent = `Product Name: ${productName}`;
+
+            const productPriceElement = document.getElementById("product-price");
+            productPriceElement.textContent = `Price: ${productPrice}`;
+
+
+
+        });
+    </script>
+</body>
+
+</html>
